@@ -39,7 +39,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AllSquareReactNative/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = AllSquareReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-AllSquareReactNative-AllSquareReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AllSquareReactNative-AllSquareReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		322EE7D852DA7F19C62C16CA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = AllSquareReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		322EE7D852DA7F19C62C16CA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = AllSquareReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-AllSquareReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative.debug.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative/Pods-AllSquareReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-AllSquareReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative.release.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative/Pods-AllSquareReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative-AllSquareReactNativeTests/Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +101,14 @@
 			name = AllSquareReactNative;
 			sourceTree = "<group>";
 		};
+		25F3C2112C7FDE9200DCEDAA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +129,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				25F3C2112C7FDE9200DCEDAA /* Fonts */,
 				13B07FAE1A68108700A75B9A /* AllSquareReactNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* AllSquareReactNativeTests */,

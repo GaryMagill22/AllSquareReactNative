@@ -1,8 +1,9 @@
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, Pressable } from 'react-native';
-import React, { Component } from 'react';
+import React from 'react';
 import { colors } from '../assets/utils/colors';
 import { useNavigation } from '@react-navigation/native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+// import Ionicons from 'react-native-vector-icons/Ionicons';
+// import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
 
@@ -21,7 +22,6 @@ const LoginScreen = () => {
     return (
         <View style={styles.container} >
             <TouchableOpacity style={styles.backButtonWrapper} >
-                <Ionicons name={"arrow-back"} size={20} color={colors.primary} />
                 <Pressable style={styles.pressable} title='Back' onPress={handleBack}>
                     <Text style={styles.text} >Back </Text>
                 </Pressable>
@@ -34,7 +34,7 @@ const LoginScreen = () => {
                 {/* Form  */}
                 <View style={styles.formContainer} >
                     <View style={styles.inputContainer} >
-                        <Ionicons name={"mail-outline"} size={20} color={colors.primary} />
+                        {/* <Ionicons name={"mail-outline"} size={20} color={colors.primary} /> */}
                         <TextInput />
                     </View>
                 </View>

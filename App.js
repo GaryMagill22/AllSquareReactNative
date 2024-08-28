@@ -9,7 +9,6 @@ import HomeScreen from './src/Screens/HomeScreen';
 import LoginScreen from './src/Screens/LoginScreen';
 
 
-
 import {
   SafeAreaView,
   ScrollView,
