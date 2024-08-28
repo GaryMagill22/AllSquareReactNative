@@ -4,8 +4,9 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator, Navigation } from '@react-navigation/native-stack';
 import { StyleSheet, Text, View } from 'react-native'
-// import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import HomeScreen from './src/Screens/HomeScreen';
+import LoginScreen from './src/Screens/LoginScreen';
 import {
   SafeAreaView,
   ScrollView,
@@ -32,6 +33,7 @@ const App = () => {
         headerShown: false,
       }} >
         <Stack.Screen name={"HOME"} component={HomeScreen} />
+        <Stack.Screen name={"LOGIN"} component={LoginScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
