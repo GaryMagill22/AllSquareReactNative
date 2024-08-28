@@ -32,6 +32,7 @@ const HomeScreen = () => {
                 <TouchableOpacity style={[styles.loginButtonWrapper]} >
                     <Text style={styles.singupButtonText} >Sign-up</Text>
                 </TouchableOpacity>
+                
             </View>
         </View>
     )
@@ -78,7 +79,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         width: "50%",
-        // backgroundColor: colors.primary,
         borderRadius: 98,
     },
     loginButtonText: {
