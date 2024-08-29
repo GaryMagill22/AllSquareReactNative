@@ -16,9 +16,8 @@ const HomeScreen = () => {
     return (
         <View style={styles.container} >
             <Image source={require("../assets/images/All-Square-Logo.png")} style={styles.logo} />
-            <Text style={styles.title} >Lorem ipsum dolor.</Text>
-            <Text style={styles.subTitle} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit illo explicabo ab dolor at,
-                delectus tenetur quam esse ad quisquam quaerat alias, im.
+            <Text style={styles.title} >Bet. Play. Win.</Text>
+            <Text style={styles.subTitle} >Upgrade your golf rounds: Simple Bets, Instant Wins. Challenge friends, track live scores, and ensure every shot matters. Bet directly from your digital wallet and savor speedy payouts.
             </Text>
             <View style={styles.buttonContainer} >
                 <TouchableOpacity style={[
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
         alignSelf: "center",
     },
     title: {
-        fontFamily: fonts.SemiBold,
+        fontWeight: "bold",
         fontSize: 40,
         textAlign: "center",
         color: colors.primary,
