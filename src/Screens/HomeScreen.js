@@ -11,6 +11,9 @@ const HomeScreen = () => {
     const handleLogin = () => {
         navigation.navigate("LOGIN");
     }
+    const handleSignup = () => {
+        navigation.navigate("SIGNUP");
+    }
 
 
     return (
@@ -28,8 +31,8 @@ const HomeScreen = () => {
                 >
                     <Text style={styles.loginButtonText } >Login</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.loginButtonWrapper]} >
-                    <Text style={styles.singupButtonText} >Sign-up</Text>
+                <TouchableOpacity style={[styles.loginButtonWrapper]} onPress={handleSignup} >
+                    <Text style={styles.signupButtonText} >Sign-up</Text>
                 </TouchableOpacity>
                 
             </View>

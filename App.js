@@ -7,6 +7,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { PropsWithChildren } from 'react';
 import HomeScreen from './src/Screens/HomeScreen';
 import LoginScreen from './src/Screens/LoginScreen';
+import SignupScreen from './src/Screens/SignupScreen';
 
 
 import {
@@ -37,6 +38,7 @@ const App = () => {
       }} >
         <Stack.Screen name={"HOME"} component={HomeScreen} />
         <Stack.Screen name={"LOGIN"} component={LoginScreen} />
+        <Stack.Screen name={"SIGNUP"} component={SignupScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
