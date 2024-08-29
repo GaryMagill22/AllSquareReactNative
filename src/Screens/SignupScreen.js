@@ -20,6 +20,10 @@ const SignupScreen = () => {
     const [lastNameVerify, setLastNameVerify] = useState(false);
     const [email, setEmail] = useState('');
     const [emailVerify, setEmailVerify] = useState(false);
+    const [username, setUsername] = useState('');
+    const [usernameVerify, setUsernameVerify] = useState(false);
+    const [] = useState();
+    const [] = useState();
     const [] = useState();
 
 
@@ -55,6 +59,17 @@ const SignupScreen = () => {
             setEmailVerify(true);
         }
     };
+
+    const handleUsername = (e) => {
+        const username = e.nativeEvent.text;
+        setUsername(username);
+        setUsernameVerify(false);
+        if (/^[a-zA-Z0-9]{5,}$/.test(username)) {
+            setUsername(username);
+            setUsernameVerify(true);
+    }
+};
+
 
 
     // handles when user click "back" arrow
