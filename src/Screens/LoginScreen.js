@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View, TouchableOpacity, Pressable, Touchable } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, Image } from 'react-native';
 import React, { useState } from 'react';
 import { colors } from '../assets/utils/colors';
 import { useNavigation } from '@react-navigation/native';
@@ -10,15 +10,14 @@ import { faEnvelope, faLock, faEye } from '@fortawesome/free-solid-svg-icons';
 
 const LoginScreen = () => {
 
+    const navigation = useNavigation();
     const [secureEntry, setSecureEntry] = useState(true);
 
 
 
-    const navigation = useNavigation();
 
-    const handleBack = () => {
-        navigation.navigate("HOME");
-        console.log("Back to Home");
+    const handleGoBack = () => {
+        navigation.goBack();
     };
 
 
@@ -26,7 +25,7 @@ const LoginScreen = () => {
 
     return (
         <View style={styles.container} >
-            <TouchableOpacity style={styles.backButtonWrapper} onPress={handleBack} >
+            <TouchableOpacity style={styles.backButtonWrapper} onPress={handleGoBack} >
                 <FontAwesomeIcon style={styles.arrow} icon={faArrowLeft} />
             </TouchableOpacity>
             <View style={styles.textContainer} >
@@ -62,9 +61,24 @@ const LoginScreen = () => {
                     </TouchableOpacity>
                 </View>
             </View>
-                <TouchableOpacity >
-                    <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
-                </TouchableOpacity>
+            <TouchableOpacity >
+                <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.loginbuttonWrapper}>
+                <Text style={styles.loginText} >Login</Text>
+            </TouchableOpacity>
+            <Text style={styles.continueText} >or continue with</Text>
+            <TouchableOpacity style={styles.googleButtonContainer} >
+                <Image 
+                source={require("../assets/images/google-icon.png")} 
+                style={styles.googleIcon} 
+                />
+                <Text style={styles.googleText} >Google</Text>
+            </TouchableOpacity>
+            <View style={styles.footerContainer}>
+                <Text style={styles.accountText} >Don't have an account?</Text>
+                <Text style={styles.signupText} >Sign up</Text>
+            </View>
         </View>
     )
 }
@@ -83,16 +97,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         elevation: 3,
     },
-    text: {
-        textAlign: 'center',
-        fontSize: 10,
-        lineHeight: 21,
-        fontWeight: 'bold',
-        letterSpacing: 0.25,
-        color: "white",
-    },
     formContainer: {
-        marginTop: 20,
+        // marginTop: 20,
     },
     container: {
         flex: 1,
@@ -100,18 +106,17 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     backButtonWrapper: {
-        marginVertical: 20,
+        marginVertical: 10,
     },
     textContainer: {
-        marginVertical: 20,
+        marginVertical: 10,
     },
     headingText: {
-        fontSize: 50,
+        fontSize: 40,
         color: colors.primary,
         fontWeight: 'bold',
     },
     formContainer: {
-        marginTop: 20,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -153,6 +158,60 @@ const styles = StyleSheet.create({
     },
     forgotPasswordText: {
         textAlign: "right",
+        fontWeight: "bold",
+    },
+    loginbuttonWrapper: {
+        backgroundColor: colors.primary,
+        borderRadius: 100,
+        marginTop: 20,
+    },
+    loginText: {
+        color: colors.white,
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        padding: 13,
+    },
+    continueText: {
+        textAlign: 'center',
+        marginVertical: 10,
+        color: colors.darkGray,
+        fontSize: 14,
+        fontWeight: 'bold',
+        fontFamily: "regular",
+    },
+    googleButtonContainer: {
+        flexDirection: "row",
+        borderWidth: 2,
+        borderColor: colors.primary,
+        borderRadius: 100,
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 6,
+    },
+    googleIcon: {
+        width: 30,
+        height: 30,
+    },
+    googleText: {
+        color: colors.primary,
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    footerContainer: {
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        marginVertical: 20,
+        gap: 3,
+
+    },
+    accountText: {
+        color: colors.primary,
+        fontFamily: "regular",
+    },
+    signupText: {
+        color: colors.primary,
         fontWeight: "bold",
     },
 });
