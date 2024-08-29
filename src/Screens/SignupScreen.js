@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, Image, ScrollView, Error, Feather } from 'react-native';
-import React, { useState, onChange } from 'react';
+import { useState, onChange } from 'react';
 import { colors } from '../assets/utils/colors';
 import { useNavigation } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -18,8 +18,8 @@ const SignupScreen = () => {
     const [firstNameVerify, setFirstNameVerify] = useState(false);
     const [lastName, setLastName] = useState('');
     const [lastNameVerify, setLastNameVerify] = useState(false);
-    const [] = useState();
-    const [] = useState();
+    const [email, setEmail] = useState('');
+    const [emailVerify, setEmailVerify] = useState(false);
     const [] = useState();
 
 
@@ -29,22 +29,35 @@ const SignupScreen = () => {
     const handleFirstName = (e) => {
         const firstName = e.nativeEvent.text;
         setFirstName(firstName);
+        setFirstNameVerify(false);
         if (firstName.length > 2) {
             setFirstNameVerify(true);
         }
-        console.log(e.nativeEvent.text);
+        // console.log(e.nativeEvent.text);
     };
 
     const handleLastName = (e) => {
         const lastName = e.nativeEvent.text;
         setLastName(firstName);
-        if (lastName.length > 3) {
+        setLastNameVerify(false);
+        if (lastName.length > 2) {
             setLastNameVerify(true);
         }
-        console.log(e.nativeEvent.text);
+        // console.log(e.nativeEvent.text);
+    };
+
+    const handleEmail = (e) => {
+        const email = e.nativeEvent.text;
+        setEmail(email);
+        setEmailVerify(false);
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            setEmail(email);
+            setEmailVerify(true);
+        }
     };
 
 
+    // handles when user click "back" arrow
     const handleGoBack = () => {
         navigation.goBack();
     };
@@ -56,7 +69,7 @@ const SignupScreen = () => {
 
 
     return (
-        <ScrollView>
+        <ScrollView contentContainerStyle={{flexGrow: 1}} showsVerticalScrollIndicator={false} >
             <View style={styles.container} >
                 <TouchableOpacity style={styles.backButtonWrapper} onPress={handleGoBack} >
                     <FontAwesomeIcon style={styles.arrow} icon={faArrowLeft} />
@@ -77,12 +90,17 @@ const SignupScreen = () => {
                             name="firstName"
                             onChange={e => handleFirstName(e)}
                         />
-                        {firstNameVerify ? (
+                        {firstName.length < 1 ? null : firstNameVerify ? (
                             <FontAwesomeIcon style={styles.errorIcon} icon={faCheck} color="green" size={20} />
                         ) : (
                             <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
                         )}
                     </View>
+                    {firstName.length < 1 ? null : firstNameVerify ? null : (
+                        <Text style={styles.errorMessage}>
+                            First Name must be atleast 3 characters.
+                        </Text>
+                    )}
                     <View style={styles.inputContainer} >
                         <FontAwesomeIcon style={styles.envelope} icon={faIdCard} />
                         <TextInput
@@ -92,14 +110,18 @@ const SignupScreen = () => {
                             keyboardType='last-name'
                             name="lastName"
                             onChange={e => handleLastName(e)}
-
                         />
-                        {lastNameVerify ? (
+                        {lastName.length < 1 ? null : lastNameVerify ? (
                             <FontAwesomeIcon style={styles.errorIcon} icon={faCheck} color="green" size={20} />
                         ) : (
                             <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
                         )}
                     </View>
+                    {lastName.length < 1 ? null : lastNameVerify ? null : (
+                        <Text style={styles.errorMessage}>
+                            Last Name must be atleast 3 characters.
+                        </Text>
+                    )}
                     <View style={styles.inputContainer} >
                         <FontAwesomeIcon style={styles.envelope} icon={faEnvelope} />
                         <TextInput
@@ -107,83 +129,95 @@ const SignupScreen = () => {
                             placeholder="Email Address"
                             palaceholderTextColor={colors.secondary}
                             keyboardType='email-adress'
+                            onChange={e => handleEmail(e)}
                         />
-                    </View>
-                    <View style={styles.inputContainer} >
-                        <FontAwesomeIcon icon={faUser} style={styles.lock} />
-                        <TextInput
-                            syle={styles.textInput}
-                            placeholder="Username"
-                            palaceholderTextColor={colors.secondary}
-                            keyboardType='username'
-                        />
-                    </View>
-                    <View style={styles.inputContainer} >
-                        <FontAwesomeIcon style={styles.envelope} icon={faGolfBallTee} />
-                        <TextInput
-                            syle={styles.textInput}
-                            placeholder="Handicap"
-                            palaceholderTextColor={colors.secondary}
-                            keyboardType='number-pad'
-                        />
-                    </View>
-                    <View style={styles.inputContainer} >
-                        <FontAwesomeIcon icon={faLock} style={styles.lock} />
-                        <TextInput
-                            syle={styles.textInput}
-                            placeholder="Enter your password"
-                            palaceholderTextColor={colors.secondary}
-                            secureTextEntry={secureEntry}
-                        />
-                        <TouchableOpacity
-                            onPress={() => {
-                                setSecureEntry((prev) => !prev)
-                            }}
-                        >
-                            <FontAwesomeIcon style={styles.eye} icon={faEye} />
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.inputContainer} >
-                        <FontAwesomeIcon icon={faLock} style={styles.lock} />
-                        <TextInput
-                            syle={styles.textInput}
-                            placeholder="Confirm Password"
-                            palaceholderTextColor={colors.secondary}
-                            secureTextEntry={secureEntry}
-                        />
-                        <TouchableOpacity
-                            onPress={() => {
-                                setConfirmPassword((prev) => !prev)
-                            }}
-                        >
-                            <FontAwesomeIcon style={styles.eye} icon={faEye} />
-                        </TouchableOpacity>
+                    {email.length < 1 ? null : emailVerify ? (
+                        <FontAwesomeIcon style={styles.errorIcon} icon={faCheck} color="green" size={20} />
+                    ) : (
+                        <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
+                    )}
                     </View>
                 </View>
-                {/* <TouchableOpacity >
-                <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
-            </TouchableOpacity> */}
-                <TouchableOpacity style={styles.loginbuttonWrapper}>
-                    <Text style={styles.loginText} >Register</Text>
-                </TouchableOpacity>
-                <Text style={styles.continueText} >or continue with</Text>
-                <TouchableOpacity style={styles.googleButtonContainer} >
-                    <Image
-                        source={require("../assets/images/google-icon.png")}
-                        style={styles.googleIcon}
+                {email.length < 1 ? null : emailVerify ? null : (
+                    <Text style={styles.errorMessage}>
+                        Enter valid email address.
+                    </Text>
+                )}
+                <View style={styles.inputContainer} >
+                    <FontAwesomeIcon icon={faUser} style={styles.lock} />
+                    <TextInput
+                        syle={styles.textInput}
+                        placeholder="Username"
+                        palaceholderTextColor={colors.secondary}
+                        keyboardType='username'
                     />
-                    <Text style={styles.googleText} >Google</Text>
-                </TouchableOpacity>
-                <View style={styles.footerContainer} >
-                    <Text style={styles.accountText}>Already have an account?</Text>
-                    <TouchableOpacity onPress={handleLogin}>
-                        <Text style={styles.signupText}>Login</Text>
+                </View>
+                <View style={styles.inputContainer} >
+                    <FontAwesomeIcon style={styles.envelope} icon={faGolfBallTee} />
+                    <TextInput
+                        syle={styles.textInput}
+                        placeholder="Handicap"
+                        palaceholderTextColor={colors.secondary}
+                        keyboardType='number-pad'
+                    />
+                </View>
+                <View style={styles.inputContainer} >
+                    <FontAwesomeIcon icon={faLock} style={styles.lock} />
+                    <TextInput
+                        syle={styles.textInput}
+                        placeholder="Enter your password"
+                        palaceholderTextColor={colors.secondary}
+                        secureTextEntry={secureEntry}
+                    />
+                    <TouchableOpacity
+                        onPress={() => {
+                            setSecureEntry((prev) => !prev)
+                        }}
+                    >
+                        <FontAwesomeIcon style={styles.eye} icon={faEye} />
                     </TouchableOpacity>
                 </View>
+                <View style={styles.inputContainer} >
+                    <FontAwesomeIcon icon={faLock} style={styles.lock} />
+                    <TextInput
+                        syle={styles.textInput}
+                        placeholder="Confirm Password"
+                        palaceholderTextColor={colors.secondary}
+                        secureTextEntry={secureEntry}
+                    />
+                    <TouchableOpacity
+                        onPress={() => {
+                            setConfirmPassword((prev) => !prev)
+                        }}
+                    >
+                        <FontAwesomeIcon style={styles.eye} icon={faEye} />
+                    </TouchableOpacity>
+                </View>
+            </View>
+            {/* <TouchableOpacity >
+                <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
+            </TouchableOpacity> */}
+            <TouchableOpacity style={styles.loginbuttonWrapper}>
+                <Text style={styles.loginText} >Register</Text>
+            </TouchableOpacity>
+            <Text style={styles.continueText} >or continue with</Text>
+            <TouchableOpacity style={styles.googleButtonContainer} >
+                <Image
+                    source={require("../assets/images/google-icon.png")}
+                    style={styles.googleIcon}
+                />
+                <Text style={styles.googleText} >Google</Text>
+            </TouchableOpacity>
+            <View style={styles.footerContainer} >
+                <Text style={styles.accountText}>Already have an account?</Text>
+                <TouchableOpacity onPress={handleLogin}>
+                    <Text style={styles.signupText}>Login</Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
     )
 }
+
 
 
 
@@ -323,5 +357,9 @@ const styles = StyleSheet.create({
     signupText: {
         color: colors.primary,
         fontWeight: "bold",
+    },
+    errorMessage: {
+        marginLeft: 20,
+        color: "red",
     },
 });
