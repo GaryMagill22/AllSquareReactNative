@@ -3,8 +3,8 @@ import { colors } from '../assets/utils/colors'
 import { fonts } from '../assets/utils/fonts'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-// import firestore from '@react-native-firebase/firestore';
-
+import firestore from '@react-native-firebase/firestore';
+import { useEffect } from 'react'
 
 const HomeScreen = () => {
 
@@ -19,14 +19,14 @@ const HomeScreen = () => {
 
 
     // trying to get Data from firestore as test
-    // const getData = async () => {
-    //     const usersCollection = await firestore().collection('Users').get();
-    //     console.log(usersCollection.docs);
-    // }
+    const getData = async () => {
+        const usersCollection = await firestore().collection('Users').get();
+        console.log(usersCollection);
+    }
 
-    // useEffect(() => {
-    //     getData();
-    // }, []);
+    useEffect(() => {
+        getData();
+    }, []);
 
 
 
