@@ -86,15 +86,15 @@ android {
         versionCode 1
         versionName "1.0"
     }
-    def getProperty(name) {
-        def file = new File(project.rootDir, ".env")
-        if (file.exists()) {
-            Properties properties = new Properties()
-            properties.load(new FileInputStream(file))
-            return properties.getProperty(name)
-        }
-        return null
-    }
+    // def getProperty(name) {
+    //     def file = new File(project.rootDir, ".env")
+    //     if (file.exists()) {
+    //         Properties properties = new Properties()
+    //         properties.load(new FileInputStream(file))
+    //         return properties.getProperty(name)
+    //     }
+    //     return null
+    // }
 
     signingConfigs {
         debug {
