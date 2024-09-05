@@ -115,6 +115,7 @@
 		13B07FAE1A68108700A75B9A /* AllSquareReactNative */ = {
 			isa = PBXGroup;
 			children = (
+				257A83C52C8912E70071D364 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -147,7 +148,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				257A83C52C8912E70071D364 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* AllSquareReactNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* AllSquareReactNativeTests */,
@@ -535,9 +535,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FM8429W47B;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AllSquareReactNative/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "All Square";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -564,8 +566,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FM8429W47B;
 				INFOPLIST_FILE = AllSquareReactNative/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "All Square";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

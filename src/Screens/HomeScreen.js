@@ -12,13 +12,15 @@ const HomeScreen = () => {
 
     const handleLogin = () => {
         navigation.navigate("LOGIN");
+        console.log("Login Button Pressed");
     }
     const handleSignup = () => {
         navigation.navigate("SIGNUP");
+        console.log("Signup Button Pressed");
     }
 
 
-    // // trying to get Data from firestore as test
+    // trying to get Data from firestore as test
     // const getData = async () => {
     //     const usersCollection = await firestore().collection('Users').get();
     //     console.log(usersCollection);
