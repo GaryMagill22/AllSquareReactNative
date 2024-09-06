@@ -1,6 +1,7 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+apply plugin: 'com.google.gms.google-services'
 apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 
 /**
@@ -86,6 +87,16 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    def getProperty(name) {
+        def file = new File(project.rootDir, ".env")
+        if (file.exists()) {
+            Properties properties = new Properties()
+            properties.load(new FileInputStream(file))
+            return properties.getProperty(name)
+        }
+        return null
+    }
+
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
@@ -97,6 +108,8 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            buildConfigField "String", "GOOGLE_API_KEY", getProperty("GOOGLE_API_KEY")
+
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
@@ -104,6 +117,8 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            buildConfigField "String", "GOOGLE_API_KEY", getProperty("GOOGLE_API_KEY")
+
         }
     }
 }

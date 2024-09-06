@@ -18,10 +18,12 @@ const LoginScreen = () => {
 
     const handleGoBack = () => {
         navigation.goBack();
+        console.log("Go Back Button Pressed");
     };
 
     const handleSignup = () => {
         navigation.navigate("SIGNUP");
+        console.log("Signup Button Pressed");
     };
 
 
