@@ -906,6 +906,7 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
+
 "@firebase/analytics-types@0.8.2":
   version "0.8.2"
   resolved "https://registry.npmjs.org/@firebase/analytics-types/-/analytics-types-0.8.2.tgz"
@@ -922,6 +923,7 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
+
 "@firebase/app-check-compat@0.3.11":
   version "0.3.11"
   resolved "https://registry.npmjs.org/@firebase/app-check-compat/-/app-check-compat-0.3.11.tgz"
@@ -933,6 +935,7 @@
     "@firebase/logger" "0.4.2"
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
+
 
 "@firebase/app-check-interop-types@0.3.2":
   version "0.3.2"
@@ -954,7 +957,7 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
-"@firebase/app-compat@0.2.35", "@firebase/app-compat@0.x":
+
   version "0.2.35"
   resolved "https://registry.npmjs.org/@firebase/app-compat/-/app-compat-0.2.35.tgz"
   integrity sha512-vgay/WRjeH0r97/Q6L6df2CMx7oyNFDsE5yPQ9oR1G+zx2eT0s8vNNh0WlKqQxUEWaOLRnXhQ8gy7uu0cBgTRg==
@@ -965,12 +968,13 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
+
 "@firebase/app-types@0.9.2", "@firebase/app-types@0.x":
   version "0.9.2"
   resolved "https://registry.npmjs.org/@firebase/app-types/-/app-types-0.9.2.tgz"
   integrity sha512-oMEZ1TDlBz479lmABwWsWjzHwheQKiAgnuKxE0pz0IXCVx7/rtlkx1fQ6GfgK24WCrxDKMplZrT50Kh04iMbXQ==
 
-"@firebase/app@0.10.5", "@firebase/app@0.x":
+
   version "0.10.5"
   resolved "https://registry.npmjs.org/@firebase/app/-/app-0.10.5.tgz"
   integrity sha512-iY/fNot+hWPk9sTX8aHMqlcX9ynRvpGkskWAdUZ2eQQdLo8d1hSFYcYNwPv0Q/frGMasw8udKWMcFOEpC9fG8g==
@@ -980,6 +984,7 @@
     "@firebase/util" "1.9.6"
     idb "7.1.1"
     tslib "^2.1.0"
+
 
 "@firebase/auth-compat@0.5.9":
   version "0.5.9"
@@ -1014,6 +1019,7 @@
     tslib "^2.1.0"
     undici "5.28.4"
 
+
 "@firebase/component@0.6.7":
   version "0.6.7"
   resolved "https://registry.npmjs.org/@firebase/component/-/component-0.6.7.tgz"
@@ -1021,6 +1027,7 @@
   dependencies:
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
+
 
 "@firebase/database-compat@1.0.5":
   version "1.0.5"
@@ -1034,6 +1041,7 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
+
 "@firebase/database-types@1.0.3":
   version "1.0.3"
   resolved "https://registry.npmjs.org/@firebase/database-types/-/database-types-1.0.3.tgz"
@@ -1041,6 +1049,7 @@
   dependencies:
     "@firebase/app-types" "0.9.2"
     "@firebase/util" "1.9.6"
+
 
 "@firebase/database@1.0.5":
   version "1.0.5"
@@ -1066,6 +1075,7 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
+
 "@firebase/firestore-types@3.0.2":
   version "3.0.2"
   resolved "https://registry.npmjs.org/@firebase/firestore-types/-/firestore-types-3.0.2.tgz"
@@ -1085,6 +1095,7 @@
     tslib "^2.1.0"
     undici "5.28.4"
 
+
 "@firebase/functions-compat@0.3.11":
   version "0.3.11"
   resolved "https://registry.npmjs.org/@firebase/functions-compat/-/functions-compat-0.3.11.tgz"
@@ -1095,6 +1106,7 @@
     "@firebase/functions-types" "0.6.2"
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
+
 
 "@firebase/functions-types@0.6.2":
   version "0.6.2"
@@ -1114,6 +1126,7 @@
     tslib "^2.1.0"
     undici "5.28.4"
 
+
 "@firebase/installations-compat@0.2.7":
   version "0.2.7"
   resolved "https://registry.npmjs.org/@firebase/installations-compat/-/installations-compat-0.2.7.tgz"
@@ -1124,6 +1137,7 @@
     "@firebase/installations-types" "0.5.2"
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
+
 
 "@firebase/installations-types@0.5.2":
   version "0.5.2"
@@ -1140,12 +1154,14 @@
     idb "7.1.1"
     tslib "^2.1.0"
 
+
 "@firebase/logger@0.4.2":
   version "0.4.2"
   resolved "https://registry.npmjs.org/@firebase/logger/-/logger-0.4.2.tgz"
   integrity sha512-Q1VuA5M1Gjqrwom6I6NUU4lQXdo9IAQieXlujeHZWvRt1b7qQ0KwBaNAjgxG27jgF9/mUwsNmO8ptBCGVYhB0A==
   dependencies:
     tslib "^2.1.0"
+
 
 "@firebase/messaging-compat@0.2.9":
   version "0.2.9"
@@ -1161,6 +1177,7 @@
   version "0.2.2"
   resolved "https://registry.npmjs.org/@firebase/messaging-interop-types/-/messaging-interop-types-0.2.2.tgz"
   integrity sha512-l68HXbuD2PPzDUOFb3aG+nZj5KA3INcPwlocwLZOzPp9rFM9yeuI9YLl6DQfguTX5eAGxO0doTR+rDLDvQb5tA==
+
 
 "@firebase/messaging@0.12.9":
   version "0.12.9"
@@ -1186,6 +1203,7 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
+
 "@firebase/performance-types@0.2.2":
   version "0.2.2"
   resolved "https://registry.npmjs.org/@firebase/performance-types/-/performance-types-0.2.2.tgz"
@@ -1202,6 +1220,7 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
+
 "@firebase/remote-config-compat@0.2.7":
   version "0.2.7"
   resolved "https://registry.npmjs.org/@firebase/remote-config-compat/-/remote-config-compat-0.2.7.tgz"
@@ -1213,6 +1232,7 @@
     "@firebase/remote-config-types" "0.3.2"
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
+
 
 "@firebase/remote-config-types@0.3.2":
   version "0.3.2"
@@ -1229,6 +1249,7 @@
     "@firebase/logger" "0.4.2"
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
+
 
 "@firebase/storage-compat@0.3.8":
   version "0.3.8"
@@ -1256,12 +1277,13 @@
     tslib "^2.1.0"
     undici "5.28.4"
 
-"@firebase/util@1.9.6", "@firebase/util@1.x":
+
   version "1.9.6"
   resolved "https://registry.npmjs.org/@firebase/util/-/util-1.9.6.tgz"
   integrity sha512-IBr1MZbp4d5MjBCXL3TW1dK/PDXX4yOGbiwRNh1oAbE/+ci5Uuvy9KIrsFYY80as1I0iOaD5oOMA9Q8j4TJWcw==
   dependencies:
     tslib "^2.1.0"
+
 
 "@firebase/vertexai-preview@0.0.2":
   version "0.0.2"
@@ -1274,10 +1296,12 @@
     "@firebase/util" "1.9.6"
     tslib "^2.1.0"
 
+
 "@firebase/webchannel-wrapper@1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@firebase/webchannel-wrapper/-/webchannel-wrapper-1.0.0.tgz"
   integrity sha512-zuWxyfXNbsKbm96HhXzainONPFqRcoZblQ++e9cAIGUuHfl2cFSBzW01jtesqWG/lqaUyX3H8O1y9oWboGNQBA==
+
 
 "@fortawesome/fontawesome-common-types@6.6.0":
   version "6.6.0"
@@ -1817,13 +1841,14 @@
     prompts "^2.4.2"
     semver "^7.5.2"
 
-"@react-native-firebase/app@^20.4.0":
+
   version "20.4.0"
   resolved "https://registry.npmjs.org/@react-native-firebase/app/-/app-20.4.0.tgz"
   integrity sha512-I3YswH5tq0kSezyFwyV0d3J+lnH+N/SdznFZ70Lr671X0YlrbEBb6BK7FzEiwq8rKeIPh+pbgnbYwzj/k9uEnQ==
   dependencies:
     firebase "10.12.2"
     superstruct "^0.6.2"
+
 
 "@react-native/assets-registry@0.75.2":
   version "0.75.2"
@@ -3409,6 +3434,7 @@ find-up@^5.0.0:
   dependencies:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
+
 
 firebase@10.12.2:
   version "10.12.2"
@@ -5828,6 +5854,7 @@ undici@5.28.4:
   integrity sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==
   dependencies:
     "@fastify/busboy" "^2.0.0"
+
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
