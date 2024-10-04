@@ -165,6 +165,7 @@ const SignupScreen = () => {
                         placeholder="Username"
                         palaceholderTextColor={colors.secondary}
                         keyboardType='username'
+                        onChange={e => handleUsername(e)}
                     />
                 </View>
                 <View style={styles.inputContainer} >

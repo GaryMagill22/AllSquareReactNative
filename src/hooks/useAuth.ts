@@ -5,14 +5,15 @@ const auth = getAuth();
 
 export function useAuth() {
     const [user, setUser] = React.useState<User | null>(null);
-    // const [loading, setLoading] = React.useState(true);
+    const [loading, setLoading] = React.useState(true);
 
     useEffect(() => {
         const unsubscribeFromAuthStateChanged = onAuthStateChanged(auth, (user) => {
         });
 
-        return unsubscribe;
+        return unsubscribeFromAuthStateChanged;
     }, []);
 
     return { user, loading };
 }
+
