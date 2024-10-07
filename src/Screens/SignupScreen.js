@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faEnvelope, faLock, faEye, faUser, faGolfBallTee, faAddressCard, faIdCard, faExclamation, faCheck } from '@fortawesome/free-solid-svg-icons';
-
+import auth from '@react-native-firebase/auth';
 
 const SignupScreen = () => {
 
@@ -22,11 +22,8 @@ const SignupScreen = () => {
     const [emailVerify, setEmailVerify] = useState(false);
     const [username, setUsername] = useState('');
     const [usernameVerify, setUsernameVerify] = useState(false);
+    const [handicap, setHandicap] = useState('');
     const [] = useState();
-    const [] = useState();
-    const [] = useState();
-
-
 
 
     // FORM VALIDATIONS 
@@ -70,6 +67,18 @@ const SignupScreen = () => {
     }
 };
 
+const handleHandicap = (e) => {
+    const handicap = e.nativeEvent.text;
+    setHandicap(handicap);
+    // console.log(e.nativeEvent.text);
+};
+
+
+    const signUpTestFn = () => {
+        auth().createUserWithEmailAndPassword("Email", "Password").then(()=>{
+            Alert.alert("User Created");
+        })
+    };
 
 
     // handles when user click "back" arrow
@@ -175,6 +184,7 @@ const SignupScreen = () => {
                         placeholder="Handicap"
                         palaceholderTextColor={colors.secondary}
                         keyboardType='number-pad'
+                        onChange={e => handleHandicap(e)}
                     />
                 </View>
                 <View style={styles.inputContainer} >
@@ -214,7 +224,7 @@ const SignupScreen = () => {
                 <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
             </TouchableOpacity> */}
             <TouchableOpacity style={styles.loginbuttonWrapper}>
-                <Text style={styles.loginText} >Register</Text>
+                <Text onPress={signUpTestFn} style={styles.loginText} >Register</Text>
             </TouchableOpacity>
             <Text style={styles.continueText} >or continue with</Text>
             <TouchableOpacity style={styles.googleButtonContainer} >

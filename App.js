@@ -8,6 +8,8 @@ import { PropsWithChildren } from 'react';
 import HomeScreen from './src/Screens/HomeScreen';
 import LoginScreen from './src/Screens/LoginScreen';
 import SignupScreen from './src/Screens/SignupScreen';
+import { initializeApp } from "firebase/app";
+
 
 
 import {
@@ -24,7 +26,18 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBlxvlcTeZ4GVywmVbFdn6r1AWySEkgBco",
+  authDomain: "reactnativegolfapp.firebaseapp.com",
+  projectId: "reactnativegolfapp",
+  storageBucket: "reactnativegolfapp.appspot.com",
+  messagingSenderId: "466683770848",
+  appId: "1:466683770848:web:91cc0133b6286202235d85"
+};
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 const Stack = createNativeStackNavigator();
 

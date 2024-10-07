@@ -108,7 +108,7 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
-            // buildConfigField "String", "GOOGLE_API_KEY", getProperty("GOOGLE_API_KEY")
+            buildConfigField "String", "GOOGLE_API_KEY", getProperty("GOOGLE_API_KEY")
 
         }
         release {
@@ -117,7 +117,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            // buildConfigField "String", "GOOGLE_API_KEY", getProperty("GOOGLE_API_KEY")
+            buildConfigField "String", "GOOGLE_API_KEY", getProperty("GOOGLE_API_KEY")
 
         }
     }
