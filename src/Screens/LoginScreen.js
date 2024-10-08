@@ -5,6 +5,9 @@ import { useNavigation } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faEnvelope, faLock, faEye } from '@fortawesome/free-solid-svg-icons';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { FIREBASE_AUTH } from '../../FirebaseConfig';
+
 
 
 
@@ -12,9 +15,28 @@ const LoginScreen = () => {
 
     const navigation = useNavigation();
     const [secureEntry, setSecureEntry] = useState(true);
+    const [email, setEmail] = useState('');
+    const [emailVerify, setEmailVerify] = useState(false);
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [confirmPasswordVerify, setConfirmPasswordVerify] = useState(false);
 
 
 
+    const auth = FIREBASE_AUTH;
+
+
+    const signIn = async () => {
+        try {
+            const response = await signInWithEmailAndPassword(auth, email, password);
+            console.log(response);
+            alert('Check your emails!');
+        } catch (error) {
+            console.log(error);
+            alert('Sign-In Failed: ' + error.message);
+        } finally {
+        }
+    };
 
     const handleGoBack = () => {
         navigation.goBack();
@@ -68,7 +90,7 @@ const LoginScreen = () => {
             <TouchableOpacity >
                 <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.loginbuttonWrapper}>
+            <TouchableOpacity onPress={signIn} style={styles.loginbuttonWrapper}>
                 <Text style={styles.loginText} >Login</Text>
             </TouchableOpacity>
             <Text style={styles.continueText} >or continue with</Text>

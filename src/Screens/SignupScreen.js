@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faEnvelope, faLock, faEye, faUser, faGolfBallTee, faAddressCard, faIdCard, faExclamation, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FIREBASE_AUTH } from '../../FirebaseConfig';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { Alert } from 'react-native';
 
 const SignupScreen = () => {
@@ -93,19 +93,7 @@ const SignupScreen = () => {
     };
 
 
-    const signIn = async () => {
-        // setLoading(true);
-        try {
-            const response = await signInWithEmailAndPassword(auth, email, password);
-            console.log(response);
-            alert('Check your emails!');
-        } catch (error) {
-            console.log(error);
-            alert('Sign-In Failed: ' + error.message);
-        } finally {
-            // setLoading(false);
-        }
-    };
+    
 
     const signUp = async () => {
         // setLoading(true);
