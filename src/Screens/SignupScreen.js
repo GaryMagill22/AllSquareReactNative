@@ -5,19 +5,15 @@ import { useNavigation } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faEnvelope, faLock, faEye, faUser, faGolfBallTee, faAddressCard, faIdCard, faExclamation, faCheck } from '@fortawesome/free-solid-svg-icons';
-// import auth from '@react-native-firebase/auth';
-// import {getAuth} from 'firebase/auth'; 
+import { FIREBASE_AUTH } from '../../FirebaseConfig';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { Alert } from 'react-native';
-
-// const auth = getAuth();
 
 const SignupScreen = () => {
 
     const navigation = useNavigation();
     const [secureEntry, setSecureEntry] = useState(true);
-
-
-
+    // const [loading, setLoading] = useState(false);
     const [firstName, setFirstName] = useState('');
     const [firstNameVerify, setFirstNameVerify] = useState(false);
     const [lastName, setLastName] = useState('');
@@ -27,7 +23,11 @@ const SignupScreen = () => {
     const [username, setUsername] = useState('');
     const [usernameVerify, setUsernameVerify] = useState(false);
     const [handicap, setHandicap] = useState('');
-    const [] = useState();
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [confirmPasswordVerify, setConfirmPasswordVerify] = useState(false);
+
+    const auth = FIREBASE_AUTH;
 
 
     // FORM VALIDATIONS 
@@ -68,22 +68,59 @@ const SignupScreen = () => {
         if (/^[a-zA-Z0-9]{5,}$/.test(username)) {
             setUsername(username);
             setUsernameVerify(true);
-    }
-};
-
-const handleHandicap = (e) => {
-    const handicap = e.nativeEvent.text;
-    setHandicap(handicap);
-    // console.log(e.nativeEvent.text);
-};
-
-
-    const signUpTestFn = () => {
-        auth().createUserWithEmailAndPassword("Email", "Password").then(()=>{
-            Alert.alert("User Created");
-        })
+        }
     };
 
+    const handleHandicap = (e) => {
+        const handicap = e.nativeEvent.text;
+        setHandicap(handicap);
+        // console.log(e.nativeEvent.text);
+    };
+
+
+    const handlePassword = (e) => {
+        const password = e.nativeEvent.text;
+        setPassword(password);
+
+        // Validate password immediately
+        if (password.length < 8) {
+            setConfirmPasswordVerify('Password must be at least 8 characters long.');
+        } else if (password !== confirmPassword) {
+            setConfirmPasswordVerify('Passwords do not match.');
+        } else {
+            setConfirmPasswordVerify('');
+        }
+    };
+
+
+    const signIn = async () => {
+        // setLoading(true);
+        try {
+            const response = await signInWithEmailAndPassword(auth, email, password);
+            console.log(response);
+            alert('Check your emails!');
+        } catch (error) {
+            console.log(error);
+            alert('Sign-In Failed: ' + error.message);
+        } finally {
+            // setLoading(false);
+        }
+    };
+
+    const signUp = async () => {
+        // setLoading(true);
+        setPassword(password);
+        try {
+            const response = await createUserWithEmailAndPassword(auth, email, password);
+            console.log(response);
+            alert('Check your emails!');
+        } catch (error) {
+            console.log(error);
+            alert('Registration Failed: ' + error.message);
+        } finally {
+            // setLoading(false);
+        }
+    };
 
     // handles when user click "back" arrow
     const handleGoBack = () => {
@@ -97,7 +134,7 @@ const handleHandicap = (e) => {
 
 
     return (
-        <ScrollView contentContainerStyle={{flexGrow: 1}} showsVerticalScrollIndicator={false} >
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false} >
             <View style={styles.container} >
                 <TouchableOpacity style={styles.backButtonWrapper} onPress={handleGoBack} >
                     <FontAwesomeIcon style={styles.arrow} icon={faArrowLeft} />
@@ -159,11 +196,11 @@ const handleHandicap = (e) => {
                             keyboardType='email-adress'
                             onChange={e => handleEmail(e)}
                         />
-                    {email.length < 1 ? null : emailVerify ? (
-                        <FontAwesomeIcon style={styles.errorIcon} icon={faCheck} color="green" size={20} />
-                    ) : (
-                        <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
-                    )}
+                        {email.length < 1 ? null : emailVerify ? (
+                            <FontAwesomeIcon style={styles.errorIcon} icon={faCheck} color="green" size={20} />
+                        ) : (
+                            <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
+                        )}
                     </View>
                 </View>
                 {email.length < 1 ? null : emailVerify ? null : (
@@ -198,11 +235,12 @@ const handleHandicap = (e) => {
                         placeholder="Enter your password"
                         palaceholderTextColor={colors.secondary}
                         secureTextEntry={secureEntry}
+                        onChange={e => handlePassword(e)}
                     />
                     <TouchableOpacity
-                        onPress={() => {
-                            setSecureEntry((prev) => !prev)
-                        }}
+                    // onPress={() => {
+                    //     setSecureEntry((prev) => !prev)
+                    // }}
                     >
                         <FontAwesomeIcon style={styles.eye} icon={faEye} />
                     </TouchableOpacity>
@@ -216,19 +254,19 @@ const handleHandicap = (e) => {
                         secureTextEntry={secureEntry}
                     />
                     <TouchableOpacity
-                        onPress={() => {
-                            setConfirmPassword((prev) => !prev)
-                        }}
+                    // onPress={() => {
+                    //     setConfirmPassword((prev) => !prev)
+                    // }}
                     >
                         <FontAwesomeIcon style={styles.eye} icon={faEye} />
                     </TouchableOpacity>
                 </View>
             </View>
-            {/* <TouchableOpacity >
+            <TouchableOpacity >
                 <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
-            </TouchableOpacity> */}
+            </TouchableOpacity>
             <TouchableOpacity style={styles.loginbuttonWrapper}>
-                <Text onPress={signUpTestFn} style={styles.loginText} >Register</Text>
+                <Text onPress={signUp} style={styles.loginText} >Register</Text>
             </TouchableOpacity>
             <Text style={styles.continueText} >or continue with</Text>
             <TouchableOpacity style={styles.googleButtonContainer} >
