@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* AllSquareReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AllSquareReactNativeTests.m */; };
+		0B83197A9568FF5357696F16 /* Pods_AllSquareReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68C4499AB9E8CAA159817F6 /* Pods_AllSquareReactNative.framework */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		257A83C62C8912E70071D364 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 257A83C52C8912E70071D364 /* GoogleService-Info.plist */; };
+		25823F392CB053BB000B332A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25823F382CB053BB000B332A /* GoogleService-Info.plist */; };
 		25D696612C812D860074B462 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696602C812D860074B462 /* FirebaseAnalytics */; };
 		25D696632C812D860074B462 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696622C812D860074B462 /* FirebaseAuth */; };
 		25D696652C812D860074B462 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696642C812D860074B462 /* FirebaseAuthCombine-Community */; };
@@ -24,10 +25,9 @@
 		25D696732C812D860074B462 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696722C812D860074B462 /* FirebaseInstallations */; };
 		25D696752C812D860074B462 /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696742C812D860074B462 /* FirebaseMLModelDownloader */; };
 		25D696772C812D860074B462 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696762C812D860074B462 /* FirebaseStorage */; };
-		278F4EB1013C92CB4EC17087 /* Pods_AllSquareReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B1C144D02FDC756135878B /* Pods_AllSquareReactNative.framework */; };
-		553BBCE5ADEAD203BB46FB03 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A642A1FD774FF6C0CBD1D4 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D9A8647D0C0B8C996700AD47 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 322EE7D852DA7F19C62C16CA /* PrivacyInfo.xcprivacy */; };
+		F2A505CD42C8788EFAF924A3 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B708CC78EA8C52C6D15A6EA /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,15 +51,15 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AllSquareReactNative/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AllSquareReactNative/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = AllSquareReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		20B1C144D02FDC756135878B /* Pods_AllSquareReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllSquareReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		257A83C52C8912E70071D364 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25823F382CB053BB000B332A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		322EE7D852DA7F19C62C16CA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = AllSquareReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-AllSquareReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative.debug.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative/Pods-AllSquareReactNative.debug.xcconfig"; sourceTree = "<group>"; };
-		53A642A1FD774FF6C0CBD1D4 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllSquareReactNative_AllSquareReactNativeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B708CC78EA8C52C6D15A6EA /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllSquareReactNative_AllSquareReactNativeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5709B34CF0A7D63546082F79 /* Pods-AllSquareReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative.release.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative/Pods-AllSquareReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative-AllSquareReactNativeTests/Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AllSquareReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AllSquareReactNative-AllSquareReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative-AllSquareReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative-AllSquareReactNativeTests/Pods-AllSquareReactNative-AllSquareReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D68C4499AB9E8CAA159817F6 /* Pods_AllSquareReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllSquareReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553BBCE5ADEAD203BB46FB03 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework in Frameworks */,
+				F2A505CD42C8788EFAF924A3 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				25D696672C812D860074B462 /* FirebaseCrashlytics in Frameworks */,
 				25D696652C812D860074B462 /* FirebaseAuthCombine-Community in Frameworks */,
 				25D6966B2C812D860074B462 /* FirebaseFirestore in Frameworks */,
-				278F4EB1013C92CB4EC17087 /* Pods_AllSquareReactNative.framework in Frameworks */,
+				0B83197A9568FF5357696F16 /* Pods_AllSquareReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +115,6 @@
 		13B07FAE1A68108700A75B9A /* AllSquareReactNative */ = {
 			isa = PBXGroup;
 			children = (
-				257A83C52C8912E70071D364 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -132,8 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				20B1C144D02FDC756135878B /* Pods_AllSquareReactNative.framework */,
-				53A642A1FD774FF6C0CBD1D4 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */,
+				D68C4499AB9E8CAA159817F6 /* Pods_AllSquareReactNative.framework */,
+				3B708CC78EA8C52C6D15A6EA /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +147,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				25823F382CB053BB000B332A /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* AllSquareReactNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* AllSquareReactNativeTests */,
@@ -215,7 +215,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
-				8C135949949106BB6CB20322 /* [CP-User] [RNFB] Core Configuration */,
+				912F8104D74243F6B4FAEAF9 /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -293,7 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				257A83C62C8912E70071D364 /* GoogleService-Info.plist in Resources */,
+				25823F392CB053BB000B332A /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				D9A8647D0C0B8C996700AD47 /* PrivacyInfo.xcprivacy in Resources */,
 			);
@@ -335,7 +335,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllSquareReactNative/Pods-AllSquareReactNative-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C135949949106BB6CB20322 /* [CP-User] [RNFB] Core Configuration */ = {
+		912F8104D74243F6B4FAEAF9 /* [CP-User] [RNFB] Core Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
