@@ -7,8 +7,11 @@ import HomeScreen from './src/Screens/HomeScreen';
 import LoginScreen from './src/Screens/LoginScreen';
 import SignupScreen from './src/Screens/SignupScreen';
 import { initializeApp } from "firebase/app";
-import Config from 'react-native-config';
-import 'firebase/auth';
+// import Config from 'react-native-config';
+// import firebase from 'firebase/compat/app';
+// import { firebaseConfig } from './FirebaseConfig';
+// import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+
 
 
 
@@ -26,16 +29,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: Config.API_KEY,
-  authDomain: Config.AUTH_DOMAIN,
-  projectId: Config.PROJECT_ID,
-  
-};
-
-// Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
 
 
 const Stack = createNativeStackNavigator();
