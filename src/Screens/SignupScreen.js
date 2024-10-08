@@ -5,7 +5,11 @@ import { useNavigation } from '@react-navigation/native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faEnvelope, faLock, faEye, faUser, faGolfBallTee, faAddressCard, faIdCard, faExclamation, faCheck } from '@fortawesome/free-solid-svg-icons';
-import auth from '@react-native-firebase/auth';
+// import auth from '@react-native-firebase/auth';
+import {getAuth} from 'firebase/auth'; 
+import { Alert } from 'react-native';
+
+const auth = getAuth();
 
 const SignupScreen = () => {
 

@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator, Navigation } from '@react-navigation/native-stack';
@@ -9,6 +7,8 @@ import HomeScreen from './src/Screens/HomeScreen';
 import LoginScreen from './src/Screens/LoginScreen';
 import SignupScreen from './src/Screens/SignupScreen';
 import { initializeApp } from "firebase/app";
+import Config from 'react-native-config';
+import 'firebase/auth';
 
 
 
@@ -28,16 +28,15 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBlxvlcTeZ4GVywmVbFdn6r1AWySEkgBco",
-  authDomain: "reactnativegolfapp.firebaseapp.com",
-  projectId: "reactnativegolfapp",
-  storageBucket: "reactnativegolfapp.appspot.com",
-  messagingSenderId: "466683770848",
-  appId: "1:466683770848:web:91cc0133b6286202235d85"
+  apiKey: Config.API_KEY,
+  authDomain: Config.AUTH_DOMAIN,
+  projectId: Config.PROJECT_ID,
+  
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
+
 
 const Stack = createNativeStackNavigator();
 
