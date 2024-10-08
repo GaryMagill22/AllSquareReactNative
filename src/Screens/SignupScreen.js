@@ -78,11 +78,11 @@ const handleHandicap = (e) => {
 };
 
 
-    // const signUpTestFn = () => {
-    //     auth().createUserWithEmailAndPassword("Email", "Password").then(()=>{
-    //         Alert.alert("User Created");
-    //     })
-    // };
+    const signUpTestFn = () => {
+        auth().createUserWithEmailAndPassword("Email", "Password").then(()=>{
+            Alert.alert("User Created");
+        })
+    };
 
 
     // handles when user click "back" arrow
