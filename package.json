@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "run-ios": "npx react-native run-ios --simulator iPhone 14",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
@@ -17,7 +18,7 @@
     "@fortawesome/react-native-fontawesome": "^0.3.2",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
-    "@react-native-firebase/app": "^20.4.0",
+    "@react-native-firebase/app": "^20.5.0",
     "@react-native-firebase/firestore": "^20.4.0",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/native-stack": "^6.11.0",

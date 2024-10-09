@@ -12,6 +12,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		257A83C62C8912E70071D364 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 257A83C52C8912E70071D364 /* GoogleService-Info.plist */; };
+		25CABBBD2CB7254B00CBB25E /* Pods_AllSquareReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DC0D8C09E4A65F818E7A43 /* Pods_AllSquareReactNative.framework */; };
+		25CABBBE2CB7254B00CBB25E /* Pods_AllSquareReactNative.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04DC0D8C09E4A65F818E7A43 /* Pods_AllSquareReactNative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25D696612C812D860074B462 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696602C812D860074B462 /* FirebaseAnalytics */; };
 		25D696632C812D860074B462 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696622C812D860074B462 /* FirebaseAuth */; };
 		25D696652C812D860074B462 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696642C812D860074B462 /* FirebaseAuthCombine-Community */; };
@@ -24,10 +26,9 @@
 		25D696732C812D860074B462 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696722C812D860074B462 /* FirebaseInstallations */; };
 		25D696752C812D860074B462 /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696742C812D860074B462 /* FirebaseMLModelDownloader */; };
 		25D696772C812D860074B462 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 25D696762C812D860074B462 /* FirebaseStorage */; };
-		278F4EB1013C92CB4EC17087 /* Pods_AllSquareReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B1C144D02FDC756135878B /* Pods_AllSquareReactNative.framework */; };
-		553BBCE5ADEAD203BB46FB03 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A642A1FD774FF6C0CBD1D4 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D9A8647D0C0B8C996700AD47 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 322EE7D852DA7F19C62C16CA /* PrivacyInfo.xcprivacy */; };
+		E32A6A7AFEBC4D8865B25F73 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5A90182871401787B59466 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +41,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		25CABBBF2CB7254B00CBB25E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				25CABBBE2CB7254B00CBB25E /* Pods_AllSquareReactNative.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* AllSquareReactNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllSquareReactNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AllSquareReactNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllSquareReactNativeTests.m; sourceTree = "<group>"; };
+		04DC0D8C09E4A65F818E7A43 /* Pods_AllSquareReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllSquareReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* AllSquareReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllSquareReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AllSquareReactNative/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = AllSquareReactNative/AppDelegate.mm; sourceTree = "<group>"; };
@@ -51,15 +67,18 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AllSquareReactNative/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AllSquareReactNative/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = AllSquareReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		20B1C144D02FDC756135878B /* Pods_AllSquareReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllSquareReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		252AC0F92CB057CB004446DF /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = Pods/Podfile; sourceTree = SOURCE_ROOT; };
 		257A83C52C8912E70071D364 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25CABBBB2CB7247400CBB25E /* React_RuntimeHermes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React_RuntimeHermes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		322EE7D852DA7F19C62C16CA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = AllSquareReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3984917974A1A4821D6B5168 /* libPods-AllSquareReactNative-AllSquareReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AllSquareReactNative-AllSquareReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-AllSquareReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative.debug.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative/Pods-AllSquareReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		53A642A1FD774FF6C0CBD1D4 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllSquareReactNative_AllSquareReactNativeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5709B34CF0A7D63546082F79 /* Pods-AllSquareReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative.release.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative/Pods-AllSquareReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative-AllSquareReactNativeTests/Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AllSquareReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AllSquareReactNative-AllSquareReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllSquareReactNative-AllSquareReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-AllSquareReactNative-AllSquareReactNativeTests/Pods-AllSquareReactNative-AllSquareReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
+		CC5A90182871401787B59466 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllSquareReactNative_AllSquareReactNativeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -68,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553BBCE5ADEAD203BB46FB03 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework in Frameworks */,
+				E32A6A7AFEBC4D8865B25F73 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,12 +102,12 @@
 				25D696612C812D860074B462 /* FirebaseAnalytics in Frameworks */,
 				25D696712C812D860074B462 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				25D6966F2C812D860074B462 /* FirebaseFunctions in Frameworks */,
+				25CABBBD2CB7254B00CBB25E /* Pods_AllSquareReactNative.framework in Frameworks */,
 				25D696632C812D860074B462 /* FirebaseAuth in Frameworks */,
 				25D696772C812D860074B462 /* FirebaseStorage in Frameworks */,
 				25D696672C812D860074B462 /* FirebaseCrashlytics in Frameworks */,
 				25D696652C812D860074B462 /* FirebaseAuthCombine-Community in Frameworks */,
 				25D6966B2C812D860074B462 /* FirebaseFirestore in Frameworks */,
-				278F4EB1013C92CB4EC17087 /* Pods_AllSquareReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +134,6 @@
 		13B07FAE1A68108700A75B9A /* AllSquareReactNative */ = {
 			isa = PBXGroup;
 			children = (
-				257A83C52C8912E70071D364 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -128,12 +146,22 @@
 			name = AllSquareReactNative;
 			sourceTree = "<group>";
 		};
+		25CABBBA2CB71D5500CBB25E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				53A642A1FD774FF6C0CBD1D4 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25CABBBB2CB7247400CBB25E /* React_RuntimeHermes.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				20B1C144D02FDC756135878B /* Pods_AllSquareReactNative.framework */,
-				53A642A1FD774FF6C0CBD1D4 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */,
+				3984917974A1A4821D6B5168 /* libPods-AllSquareReactNative-AllSquareReactNativeTests.a */,
+				04DC0D8C09E4A65F818E7A43 /* Pods_AllSquareReactNative.framework */,
+				CC5A90182871401787B59466 /* Pods_AllSquareReactNative_AllSquareReactNativeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,12 +176,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				257A83C52C8912E70071D364 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* AllSquareReactNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* AllSquareReactNativeTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				25CABBBA2CB71D5500CBB25E /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -172,6 +202,7 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				252AC0F92CB057CB004446DF /* Podfile */,
 				3B4392A12AC88292D35C810B /* Pods-AllSquareReactNative.debug.xcconfig */,
 				5709B34CF0A7D63546082F79 /* Pods-AllSquareReactNative.release.xcconfig */,
 				5B7EB9410499542E8C5724F5 /* Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig */,
@@ -216,6 +247,7 @@
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
 				8C135949949106BB6CB20322 /* [CP-User] [RNFB] Core Configuration */,
+				25CABBBF2CB7254B00CBB25E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,7 +279,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -478,8 +510,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-AllSquareReactNative-AllSquareReactNativeTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FM8429W47B;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -498,7 +530,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllSquareReactNative.app/AllSquareReactNative";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllSquareReactNative.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AllSquareReactNative";
 			};
 			name = Debug;
 		};
@@ -506,9 +538,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-AllSquareReactNative-AllSquareReactNativeTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = FM8429W47B;
 				INFOPLIST_FILE = AllSquareReactNativeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,7 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllSquareReactNative.app/AllSquareReactNative";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllSquareReactNative.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AllSquareReactNative";
 			};
 			name = Release;
 		};
@@ -531,19 +563,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-AllSquareReactNative.debug.xcconfig */;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FM8429W47B;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AllSquareReactNative/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "All Square";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports-games";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -552,8 +589,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = AllSquareReactNative;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = NO;
+				VALIDATE_PRODUCT = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -562,18 +602,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-AllSquareReactNative.release.xcconfig */;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FM8429W47B;
+				ENABLE_APP_SANDBOX = YES;
 				INFOPLIST_FILE = AllSquareReactNative/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "All Square";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports-games";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -582,7 +627,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = AllSquareReactNative;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
+				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = NO;
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -651,7 +699,7 @@
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD = "";
 				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -742,7 +790,7 @@
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD = "";
 				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
