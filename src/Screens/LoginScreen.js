@@ -10,20 +10,20 @@ import { FIREBASE_AUTH } from '../../FirebaseConfig';
 
 
 
-
 const LoginScreen = () => {
-
+    
     const navigation = useNavigation();
     const [secureEntry, setSecureEntry] = useState(true);
     const [email, setEmail] = useState('');
-    const [emailVerify, setEmailVerify] = useState(false);
+    // const [emailVerify, setEmailVerify] = useState(false);
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [confirmPasswordVerify, setConfirmPasswordVerify] = useState(false);
-
-
-
+    const [loading, setLoading] = useState(false);
+    // const [confirmPassword, setConfirmPassword] = useState('');
+    // const [confirmPasswordVerify, setConfirmPasswordVerify] = useState(false);
+    
+    
     const auth = FIREBASE_AUTH;
+    
 
 
     const signIn = async () => {
@@ -35,7 +35,9 @@ const LoginScreen = () => {
             console.log(error);
             alert('Sign-In Failed: ' + error.message);
         } finally {
+            setLoading(false);
         }
+        
     };
 
     const handleGoBack = () => {
@@ -67,7 +69,10 @@ const LoginScreen = () => {
                         syle={styles.textInput}
                         placeholder="Enter your email"
                         palaceholderTextColor={colors.secondary}
+                        autoCapitalize='none'
                         keyboardType='email-adress'
+                        value={email}
+                        onChangeText={(text) => setEmail(text)}
                     />
                 </View>
                 <View style={styles.inputContainer} >
@@ -76,7 +81,10 @@ const LoginScreen = () => {
                         syle={styles.textInput}
                         placeholder="Enter your password"
                         palaceholderTextColor={colors.secondary}
+                        autoCapitalize='none'
                         secureTextEntry={secureEntry}
+                        value={password}
+                        onChangeText={(text) => setPassword(text)}
                     />
                     <TouchableOpacity
                         onPress={() => {

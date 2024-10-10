@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View, TouchableOpacity, Image, ScrollView, Error, Feather } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, Image, ScrollView, KeyboardAvoidingView } from 'react-native';
 import { useState, onChange } from 'react';
 import { colors } from '../assets/utils/colors';
 import { useNavigation } from '@react-navigation/native';
@@ -7,98 +7,99 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faEnvelope, faLock, faEye, faUser, faGolfBallTee, faAddressCard, faIdCard, faExclamation, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FIREBASE_AUTH } from '../../FirebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { Alert } from 'react-native';
+// import { Alert } from 'react-native';
+// import { text } from '@fortawesome/fontawesome-svg-core';
 
 const SignupScreen = () => {
 
     const navigation = useNavigation();
     const [secureEntry, setSecureEntry] = useState(true);
     // const [loading, setLoading] = useState(false);
-    const [firstName, setFirstName] = useState('');
-    const [firstNameVerify, setFirstNameVerify] = useState(false);
-    const [lastName, setLastName] = useState('');
+    // const [firstName, setFirstName] = useState('');
+    // const [firstNameVerify, setFirstNameVerify] = useState(false);
+    // const [lastName, setLastName] = useState('');
     const [lastNameVerify, setLastNameVerify] = useState(false);
     const [email, setEmail] = useState('');
     const [emailVerify, setEmailVerify] = useState(false);
-    const [username, setUsername] = useState('');
-    const [usernameVerify, setUsernameVerify] = useState(false);
-    const [handicap, setHandicap] = useState('');
+    // const [username, setUsername] = useState('');
+    // const [usernameVerify, setUsernameVerify] = useState(false);
+    // const [handicap, setHandicap] = useState('');
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [confirmPasswordVerify, setConfirmPasswordVerify] = useState(false);
+    // const [confirmPassword, setConfirmPassword] = useState('');
+    // const [confirmPasswordVerify, setConfirmPasswordVerify] = useState(false);
 
     const auth = FIREBASE_AUTH;
 
 
-    // FORM VALIDATIONS 
-    const handleFirstName = (e) => {
-        const firstName = e.nativeEvent.text;
-        setFirstName(firstName);
-        setFirstNameVerify(false);
-        if (firstName.length > 2) {
-            setFirstNameVerify(true);
-        }
-        // console.log(e.nativeEvent.text);
-    };
+    // // FORM VALIDATIONS 
+    // const handleFirstName = (e) => {
+    //     const firstName = e.nativeEvent.text;
+    //     setFirstName(firstName);
+    //     setFirstNameVerify(false);
+    //     if (firstName.length > 2) {
+    //         setFirstNameVerify(true);
+    //     }
+    //     // console.log(e.nativeEvent.text);
+    // };
 
-    const handleLastName = (e) => {
-        const lastName = e.nativeEvent.text;
-        setLastName(firstName);
-        setLastNameVerify(false);
-        if (lastName.length > 2) {
-            setLastNameVerify(true);
-        }
-        // console.log(e.nativeEvent.text);
-    };
+    // const handleLastName = (e) => {
+    //     const lastName = e.nativeEvent.text;
+    //     setLastName(firstName);
+    //     setLastNameVerify(false);
+    //     if (lastName.length > 2) {
+    //         setLastNameVerify(true);
+    //     }
+    //     // console.log(e.nativeEvent.text);
+    // };
 
-    const handleEmail = (e) => {
-        const email = e.nativeEvent.text;
-        setEmail(email);
-        setEmailVerify(false);
-        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            setEmail(email);
-            setEmailVerify(true);
-        }
-    };
+    // const handleEmail = (e) => {
+    //     const email = e.nativeEvent.text;
+    //     setEmail(email);
+    //     setEmailVerify(false);
+    //     if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    //         setEmail(email);
+    //         setEmailVerify(true);
+    //     }
+    // };
 
-    const handleUsername = (e) => {
-        const username = e.nativeEvent.text;
-        setUsername(username);
-        setUsernameVerify(false);
-        if (/^[a-zA-Z0-9]{5,}$/.test(username)) {
-            setUsername(username);
-            setUsernameVerify(true);
-        }
-    };
+    // const handleUsername = (e) => {
+    //     const username = e.nativeEvent.text;
+    //     setUsername(username);
+    //     setUsernameVerify(false);
+    //     if (/^[a-zA-Z0-9]{5,}$/.test(username)) {
+    //         setUsername(username);
+    //         setUsernameVerify(true);
+    //     }
+    // };
 
-    const handleHandicap = (e) => {
-        const handicap = e.nativeEvent.text;
-        setHandicap(handicap);
-        // console.log(e.nativeEvent.text);
-    };
-
-
-    const handlePassword = (e) => {
-        const password = e.nativeEvent.text;
-        setPassword(password);
-
-        // Validate password immediately
-        if (password.length < 8) {
-            setConfirmPasswordVerify('Password must be at least 8 characters long.');
-        } else if (password !== confirmPassword) {
-            setConfirmPasswordVerify('Passwords do not match.');
-        } else {
-            setConfirmPasswordVerify('');
-        }
-    };
+    // const handleHandicap = (e) => {
+    //     const handicap = e.nativeEvent.text;
+    //     setHandicap(handicap);
+    //     // console.log(e.nativeEvent.text);
+    // };
 
 
-    
+    // const handlePassword = (e) => {
+    //     const password = e.nativeEvent.text;
+    //     setPassword(password);
+
+    //     // Validate password immediately
+    //     //     if (password.length < 8) {
+    //     //         setConfirmPasswordVerify('Password must be at least 8 characters long.');
+    //     //     } else if (password !== confirmPassword) {
+    //     //         setConfirmPasswordVerify('Passwords do not match.');
+    //     //     } else {
+    //     //         setConfirmPasswordVerify('');
+    //     //     }
+    // };
+
+
+
 
     const signUp = async () => {
         // setLoading(true);
-            setPassword(password);
-        
+        setPassword(password);
+
         try {
             const response = await createUserWithEmailAndPassword(auth, email, password);
             console.log(response);
@@ -171,32 +172,36 @@ const SignupScreen = () => {
                             <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
                         )}
                     </View> */}
-                    {lastName.length < 1 ? null : lastNameVerify ? null : (
+                    {/* {lastName.length < 1 ? null : lastNameVerify ? null : (
                         <Text style={styles.errorMessage}>
                             Last Name must be atleast 3 characters.
                         </Text>
-                    )}
+                    )} */}
                     <View style={styles.inputContainer} >
-                        <FontAwesomeIcon style={styles.envelope} icon={faEnvelope} />
-                        <TextInput
-                            syle={styles.textInput}
-                            placeholder="Email Address"
-                            palaceholderTextColor={colors.secondary}
-                            keyboardType='email-adress'
-                            onChange={e => handleEmail(e)}
-                        />
-                        {email.length < 1 ? null : emailVerify ? (
-                            <FontAwesomeIcon style={styles.errorIcon} icon={faCheck} color="green" size={20} />
-                        ) : (
-                            <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
-                        )}
+                        <KeyboardAvoidingView behavior="padding" >
+                            <FontAwesomeIcon style={styles.envelope} icon={faEnvelope} />
+                            <TextInput
+                                syle={styles.textInput}
+                                placeholder="Email Address"
+                                palaceholderTextColor={colors.secondary}
+                                keyboardType='email-adress'
+                                onChangeText={(text) => setEmail(text)}
+                            />
+                            {/* {email.length < 1 ? null : emailVerify ? (
+                                <FontAwesomeIcon style={styles.errorIcon} icon={faCheck} color="green" size={20} />
+                            ) : (
+                                <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
+                            )} */}
+                        </KeyboardAvoidingView>
                     </View>
                 </View>
-                {email.length < 1 ? null : emailVerify ? null : (
+                {/* {email.length < 1 ? null : emailVerify ? null : (
                     <Text style={styles.errorMessage}>
                         Enter valid email address.
                     </Text>
-                )}
+                )} */}
+
+
                 {/* <View style={styles.inputContainer} >
                     <FontAwesomeIcon icon={faUser} style={styles.lock} />
                     <TextInput
@@ -224,12 +229,12 @@ const SignupScreen = () => {
                         placeholder="Enter your password"
                         palaceholderTextColor={colors.secondary}
                         secureTextEntry={secureEntry}
-                        onChange={e => handlePassword(e)}
+                        onChangeText={(text) => setPassword(text)}
                     />
                     <TouchableOpacity
-                    onPress={() => {
-                        setSecureEntry((prev) => !prev)
-                    }}
+                        onPress={() => {
+                            setSecureEntry((prev) => !prev)
+                        }}
                     >
                         <FontAwesomeIcon style={styles.eye} icon={faEye} />
                     </TouchableOpacity>
@@ -251,6 +256,8 @@ const SignupScreen = () => {
                     </TouchableOpacity>
                 </View> */}
             </View>
+
+
             <TouchableOpacity >
                 <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
             </TouchableOpacity>
@@ -273,12 +280,12 @@ const SignupScreen = () => {
             </View>
         </ScrollView>
     )
-}
-
-
-
+};
 
 export default SignupScreen;
+
+
+
 
 
 const styles = StyleSheet.create({

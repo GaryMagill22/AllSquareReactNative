@@ -1,8 +1,6 @@
 // import React, { useEffect } from 'react';
-// import { getAuth, onAuthStateChanged} from 'firebase/auth';
-// import { initializeApp } from "firebase/app";
-// import { firebaseConfig } from '../FirebaseConfig'; // Assuming FirebaseConfig.js is in the root directory
-// import { User } from 'firebase/auth';
+// import { onAuthStateChanged} from 'firebase/auth';
+// import { auth } from '../FirebaseConfig';
 
 
 // const app = initializeApp(firebaseConfig);

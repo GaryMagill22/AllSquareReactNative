@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator, Navigation } from '@react-navigation/native-stack';
-import { StyleSheet, Text, View } from 'react-native'
-import { PropsWithChildren } from 'react';
+import { StyleSheet } from 'react-native'
 import HomeScreen from './src/Screens/HomeScreen';
 import LoginScreen from './src/Screens/LoginScreen';
 import SignupScreen from './src/Screens/SignupScreen';
@@ -10,14 +9,13 @@ import SignupScreen from './src/Screens/SignupScreen';
 // import firebase from 'firebase/compat/app';
 // import { firebaseConfig } from './FirebaseConfig';
 // import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
-import auth from '@react-native-firebase/auth';
-import { useEffect, useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { initializeApp } from 'firebase/app';
-import { firebaseConfig } from './FirebaseConfig';
+// import auth from '@react-native-firebase/auth';
+// import { useEffect, useState } from 'react';
+// import { onAuthStateChanged } from 'firebase/auth';
+// import { initializeApp } from 'firebase/app';
+// import { FIREBASE_AUTH, firebaseConfig } from './FirebaseConfig';
 
 
-const app = initializeApp(firebaseConfig);
 
 
 const Stack = createNativeStackNavigator();
