@@ -6,29 +6,18 @@ import { PropsWithChildren } from 'react';
 import HomeScreen from './src/Screens/HomeScreen';
 import LoginScreen from './src/Screens/LoginScreen';
 import SignupScreen from './src/Screens/SignupScreen';
-import { initializeApp } from "firebase/app";
 // import Config from 'react-native-config';
 // import firebase from 'firebase/compat/app';
 // import { firebaseConfig } from './FirebaseConfig';
 // import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+import auth from '@react-native-firebase/auth';
+import { useEffect, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from './FirebaseConfig';
 
 
-
-
-import {
-  SafeAreaView,
-  ScrollView,
-  useColorScheme,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
+const app = initializeApp(firebaseConfig);
 
 
 const Stack = createNativeStackNavigator();
@@ -36,6 +25,24 @@ const Stack = createNativeStackNavigator();
 
 
 const App = () => {
+
+  // const [initializing, setInitializing] = useState(true);
+  // const [user, setUser] = useState();
+
+  // // Handle user state changes
+  // function onAuthStateChanged(user) {
+  //   setUser(user);
+  //   if (initializing) setInitializing(false);
+  // }
+
+  // useEffect(() => {
+  //   const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+  //   return subscriber; // unsubscribe on unmount
+  // }, []);
+
+
+
+
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{

@@ -1,23 +1,25 @@
-import React, { useEffect } from 'react';
-import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
-import { initializeApp } from "firebase/app";
-import { firebaseConfig } from '../FirebaseConfig'; // Assuming FirebaseConfig.js is in the root directory
+// import React, { useEffect } from 'react';
+// import { getAuth, onAuthStateChanged} from 'firebase/auth';
+// import { initializeApp } from "firebase/app";
+// import { firebaseConfig } from '../FirebaseConfig'; // Assuming FirebaseConfig.js is in the root directory
+// import { User } from 'firebase/auth';
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
 
-export function useAuth() {
-    const [user, setUser] = React.useState<User | null>(null);
-    const [loading, setLoading] = React.useState(true);
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth();
 
-    useEffect(() => {
-        const unsubscribeFromAuthStateChanged = onAuthStateChanged(auth, (user) => {
-            setUser(user);
-            setLoading(false);
-        });
+// export function useAuth() {
+//     const [user, setUser] = React.useState<User | null>(null);
+//     const [loading, setLoading] = React.useState(true);
 
-        return unsubscribeFromAuthStateChanged;
-    }, []);
+//     useEffect(() => {
+//         const unsubscribeFromAuthStateChanged = onAuthStateChanged(auth, (user) => {
+//             setUser(user);
+//             setLoading(false);
+//         });
 
-    return { user, loading };
-}
+//         return unsubscribeFromAuthStateChanged;
+//     }, []);
+
+//     return { user, loading };
+// }

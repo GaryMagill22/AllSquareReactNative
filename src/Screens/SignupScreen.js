@@ -97,7 +97,8 @@ const SignupScreen = () => {
 
     const signUp = async () => {
         // setLoading(true);
-        setPassword(password);
+            setPassword(password);
+        
         try {
             const response = await createUserWithEmailAndPassword(auth, email, password);
             console.log(response);
@@ -133,7 +134,7 @@ const SignupScreen = () => {
                 </View>
                 {/* Form  */}
                 <View style={styles.formContainer} >
-                    <View style={styles.inputContainer} >
+                    {/* <View style={styles.inputContainer} >
                         <FontAwesomeIcon style={styles.envelope} icon={faAddressCard} />
                         <TextInput
                             syle={styles.textInput}
@@ -169,7 +170,7 @@ const SignupScreen = () => {
                         ) : (
                             <FontAwesomeIcon style={styles.errorIcon} icon={faExclamation} color="red" size={20} />
                         )}
-                    </View>
+                    </View> */}
                     {lastName.length < 1 ? null : lastNameVerify ? null : (
                         <Text style={styles.errorMessage}>
                             Last Name must be atleast 3 characters.
@@ -196,7 +197,7 @@ const SignupScreen = () => {
                         Enter valid email address.
                     </Text>
                 )}
-                <View style={styles.inputContainer} >
+                {/* <View style={styles.inputContainer} >
                     <FontAwesomeIcon icon={faUser} style={styles.lock} />
                     <TextInput
                         syle={styles.textInput}
@@ -205,8 +206,8 @@ const SignupScreen = () => {
                         keyboardType='username'
                         onChange={e => handleUsername(e)}
                     />
-                </View>
-                <View style={styles.inputContainer} >
+                </View> */}
+                {/* <View style={styles.inputContainer} >
                     <FontAwesomeIcon style={styles.envelope} icon={faGolfBallTee} />
                     <TextInput
                         syle={styles.textInput}
@@ -215,7 +216,7 @@ const SignupScreen = () => {
                         keyboardType='number-pad'
                         onChange={e => handleHandicap(e)}
                     />
-                </View>
+                </View> */}
                 <View style={styles.inputContainer} >
                     <FontAwesomeIcon icon={faLock} style={styles.lock} />
                     <TextInput
@@ -226,14 +227,14 @@ const SignupScreen = () => {
                         onChange={e => handlePassword(e)}
                     />
                     <TouchableOpacity
-                    // onPress={() => {
-                    //     setSecureEntry((prev) => !prev)
-                    // }}
+                    onPress={() => {
+                        setSecureEntry((prev) => !prev)
+                    }}
                     >
                         <FontAwesomeIcon style={styles.eye} icon={faEye} />
                     </TouchableOpacity>
                 </View>
-                <View style={styles.inputContainer} >
+                {/* <View style={styles.inputContainer} >
                     <FontAwesomeIcon icon={faLock} style={styles.lock} />
                     <TextInput
                         syle={styles.textInput}
@@ -242,13 +243,13 @@ const SignupScreen = () => {
                         secureTextEntry={secureEntry}
                     />
                     <TouchableOpacity
-                    // onPress={() => {
-                    //     setConfirmPassword((prev) => !prev)
-                    // }}
+                    onPress={() => {
+                        setConfirmPassword((prev) => !prev)
+                    }}
                     >
                         <FontAwesomeIcon style={styles.eye} icon={faEye} />
                     </TouchableOpacity>
-                </View>
+                </View> */}
             </View>
             <TouchableOpacity >
                 <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
@@ -353,6 +354,7 @@ const styles = StyleSheet.create({
     forgotPasswordText: {
         textAlign: "right",
         fontWeight: "bold",
+        marginVertical: 10,
     },
     loginbuttonWrapper: {
         backgroundColor: colors.primary,
